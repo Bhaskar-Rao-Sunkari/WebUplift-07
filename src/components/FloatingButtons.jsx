@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUp, MessageCircle } from "lucide-react";
 
-// ✏️ Replace with your WhatsApp number (digits only, with country code)
-const WHATSAPP = "919999999999";
+const WHATSAPP = "918602475603";
 
 export default function FloatingButtons() {
   const [showTop, setShowTop] = useState(false);
