@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Instagram, Mail, MessageCircle, MapPin } from "lucide-react";
 
-// ✏️ Fill in your actual details here
-const EMAIL = "hello@webuplift.studio";
-const WHATSAPP = "+91 XXXXXXXXXX";
+const EMAIL = "builderhouse.work@gmail.com";
+const WHATSAPP_DISPLAY = "+91 86024 75603";
+const WHATSAPP = "918602475603";
 const LINKEDIN_URL = "#";
 const INSTAGRAM_URL = "#";
 
@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-primary/30 bg-[oklch(0.1_0_0)]">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-3">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 py-12 md:py-16 sm:grid-cols-2 md:grid-cols-3">
         <div>
           <Link to="/" className="text-xl font-bold tracking-tight">
             <span className="text-foreground">Web</span>
@@ -48,18 +48,28 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="sm:col-span-2 md:col-span-1">
           <h4 className="label-eyebrow mb-5">Contact</h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> {EMAIL}</li>
-            <li className="flex items-center gap-2"><MessageCircle className="h-4 w-4 text-primary" /> {WHATSAPP}</li>
-            <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> India · Serving globally</li>
+            <li>
+              <a href={`mailto:${EMAIL}`} className="flex items-start gap-2 transition-colors hover:text-primary break-all">
+                <Mail className="h-4 w-4 mt-0.5 shrink-0 text-primary" /> {EMAIL}
+              </a>
+            </li>
+            <li>
+              <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 transition-colors hover:text-primary">
+                <MessageCircle className="h-4 w-4 shrink-0 text-primary" /> {WHATSAPP_DISPLAY}
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <MapPin className="h-4 w-4 shrink-0 text-primary" /> India · Serving globally
+            </li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-border/60">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 py-5 text-xs text-muted-foreground sm:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 sm:px-6 py-5 text-xs text-muted-foreground sm:flex-row">
           <p>© 2025 WebUplift. All rights reserved.</p>
           <p>Built with AI</p>
         </div>

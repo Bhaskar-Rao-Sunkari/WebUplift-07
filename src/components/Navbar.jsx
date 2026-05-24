@@ -9,6 +9,8 @@ const links = [
   { to: "/contact", label: "Contact" },
 ];
 
+const WHATSAPP = "918602475603";
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -20,13 +22,19 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Prevent body scroll when mobile menu open
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? "border-b border-border/60 bg-background/70 backdrop-blur-xl" : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:py-5">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 py-4 md:py-5">
         <Link to="/" className="group flex items-center gap-1 text-xl font-bold tracking-tight">
           <span className="text-foreground">Web</span>
           <span className="text-gradient">Uplift</span>
@@ -48,12 +56,14 @@ export default function Navbar() {
               {l.label}
             </NavLink>
           ))}
-          <Link
-            to="/contact"
+          <a
+            href={`https://wa.me/${WHATSAPP}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:glow-sm hover:brightness-110"
           >
-            Book a Call
-          </Link>
+            WhatsApp Us
+          </a>
         </div>
 
         <button
@@ -65,13 +75,13 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile menu */}
+      {/* Mobile menu overlay */}
       <div
-        className={`fixed inset-0 z-50 bg-background/95 backdrop-blur-xl transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 z-50 bg-background/98 backdrop-blur-xl transition-opacity duration-300 md:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
-        <div className="flex items-center justify-between px-6 py-4">
+        <div className="flex items-center justify-between px-4 sm:px-6 py-4">
           <Link to="/" onClick={() => setOpen(false)} className="text-xl font-bold">
             <span className="text-foreground">Web</span>
             <span className="text-gradient">Uplift</span>
@@ -80,7 +90,7 @@ export default function Navbar() {
             <X className="h-6 w-6" />
           </button>
         </div>
-        <div className="flex flex-col items-center gap-8 px-6 pt-20">
+        <div className="flex flex-col items-center gap-7 px-6 pt-16">
           {links.map((l) => (
             <Link
               key={l.to}
@@ -91,13 +101,15 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <Link
-            to="/contact"
+          <a
+            href={`https://wa.me/${WHATSAPP}`}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="mt-4 rounded-full bg-primary px-8 py-3 text-base font-semibold text-primary-foreground"
+            className="mt-4 w-full max-w-xs rounded-full bg-primary px-8 py-3.5 text-center text-base font-semibold text-primary-foreground"
           >
-            Book a Call
-          </Link>
+            WhatsApp Us
+          </a>
         </div>
       </div>
     </header>

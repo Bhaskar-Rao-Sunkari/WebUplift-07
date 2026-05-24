@@ -43,15 +43,15 @@ function CountUp({ end, suffix }) {
 
 export default function Stats() {
   return (
-    <section className="relative overflow-hidden border-y border-border/60 bg-[oklch(0.16_0.02_165)] py-20">
+    <section className="relative overflow-hidden border-y border-border/60 bg-[oklch(0.16_0.02_165)] py-16 md:py-20">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--primary)_0%,_transparent_60%)] opacity-10" />
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-4">
+      <div className="relative mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 grid-cols-2 md:grid-cols-4">
         {stats.map((s) => (
           <div key={s.label} className="text-center">
-            <div className="text-5xl font-bold tracking-tight text-gradient md:text-6xl">
+            <div className="text-4xl font-bold tracking-tight text-gradient sm:text-5xl md:text-6xl">
               <CountUp end={s.value} suffix={s.suffix} />
             </div>
-            <p className="mt-3 text-sm text-muted-foreground">{s.label}</p>
+            <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-muted-foreground">{s.label}</p>
           </div>
         ))}
       </div>

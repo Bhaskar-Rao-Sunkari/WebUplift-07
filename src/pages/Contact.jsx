@@ -2,10 +2,9 @@ import SEO from "../components/SEO.jsx";
 import { Mail, MessageCircle, MapPin, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
-// ✏️ Fill in your actual details
-const EMAIL = "hello@webuplift.studio";
-const WHATSAPP_DISPLAY = "+91 XXXXXXXXXX";
-// ✏️ Get your Formspree ID from https://formspree.io — it's free
+const EMAIL = "builderhouse.work@gmail.com";
+const WHATSAPP_DISPLAY = "+91 86024 75603";
+const WHATSAPP = "918602475603";
 const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
 
 export default function Contact() {
@@ -22,10 +21,7 @@ export default function Contact() {
         body: new FormData(form),
         headers: { Accept: "application/json" },
       });
-      if (res.ok) {
-        setSubmitted(true);
-        form.reset();
-      }
+      if (res.ok) { setSubmitted(true); form.reset(); }
     } catch {
       setSubmitted(true);
       form.reset();
@@ -42,48 +38,52 @@ export default function Contact() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-hero py-24">
+      <section className="relative overflow-hidden bg-hero py-20 md:py-24">
         <div className="absolute inset-0 grid-bg opacity-40" />
-        <div className="relative mx-auto max-w-4xl px-6 text-center">
+        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 text-center">
           <span className="label-eyebrow">Get In Touch</span>
-          <h1 className="mt-4 text-5xl font-bold tracking-tight md:text-6xl">
+          <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             Let's <span className="text-gradient">Talk</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-xl text-base sm:text-lg text-muted-foreground">
             Tell us about your project and we'll get back to you within 24 hours.
           </p>
         </div>
       </section>
 
       {/* Contact section */}
-      <section className="py-20">
-        <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1fr_1.3fr]">
+      <section className="py-16 md:py-20">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1.3fr]">
 
           {/* Left: direct contact */}
           <div>
-            <h2 className="text-2xl font-semibold">Reach us directly</h2>
-            <p className="mt-3 text-muted-foreground">Prefer email or WhatsApp? We're available across channels.</p>
-            <ul className="mt-8 space-y-5">
-              <li className="glass flex items-center gap-4 rounded-xl p-5">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <Mail className="h-5 w-5" />
-                </div>
-                <div>
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground">Email</div>
-                  <div className="text-sm font-medium">{EMAIL}</div>
-                </div>
+            <h2 className="text-xl font-semibold sm:text-2xl">Reach us directly</h2>
+            <p className="mt-3 text-sm sm:text-base text-muted-foreground">Prefer email or WhatsApp? We're available across channels.</p>
+            <ul className="mt-6 sm:mt-8 space-y-4">
+              <li>
+                <a href={`mailto:${EMAIL}`} className="glass flex items-center gap-4 rounded-xl p-4 sm:p-5 transition-colors hover:border-primary/40">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <Mail className="h-5 w-5" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="text-xs uppercase tracking-wider text-muted-foreground">Email</div>
+                    <div className="truncate text-sm font-medium">{EMAIL}</div>
+                  </div>
+                </a>
               </li>
-              <li className="glass flex items-center gap-4 rounded-xl p-5">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <MessageCircle className="h-5 w-5" />
-                </div>
-                <div>
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground">WhatsApp</div>
-                  <div className="text-sm font-medium">{WHATSAPP_DISPLAY}</div>
-                </div>
+              <li>
+                <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noopener noreferrer" className="glass flex items-center gap-4 rounded-xl p-4 sm:p-5 transition-colors hover:border-primary/40">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <MessageCircle className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="text-xs uppercase tracking-wider text-muted-foreground">WhatsApp</div>
+                    <div className="text-sm font-medium">{WHATSAPP_DISPLAY}</div>
+                  </div>
+                </a>
               </li>
-              <li className="glass flex items-center gap-4 rounded-xl p-5">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+              <li className="glass flex items-center gap-4 rounded-xl p-4 sm:p-5">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
@@ -95,15 +95,15 @@ export default function Contact() {
           </div>
 
           {/* Right: form */}
-          <div className="glass rounded-2xl p-8 glow-sm">
+          <div className="glass rounded-2xl p-6 sm:p-8 glow-sm">
             {submitted ? (
-              <div className="flex h-full flex-col items-center justify-center py-16 text-center">
+              <div className="flex h-full flex-col items-center justify-center py-12 text-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/15 text-3xl">✓</div>
                 <h3 className="mt-6 text-2xl font-semibold text-gradient">Thanks!</h3>
                 <p className="mt-2 text-muted-foreground">We'll be in touch within 24 hours.</p>
               </div>
             ) : (
-              <form onSubmit={onSubmit} className="space-y-5">
+              <form onSubmit={onSubmit} className="space-y-4 sm:space-y-5">
                 <Field label="Full Name" name="name" required>
                   <input name="name" required type="text" className="form-input" placeholder="Your name" />
                 </Field>
@@ -132,7 +132,7 @@ export default function Contact() {
                   <textarea
                     name="message"
                     required
-                    rows={5}
+                    rows={4}
                     className="form-input resize-none"
                     placeholder="Tell us about your project..."
                   />
@@ -157,7 +157,7 @@ export default function Contact() {
 function Field({ label, name, required, children }) {
   return (
     <label htmlFor={name} className="block">
-      <span className="mb-2 block text-xs font-medium uppercase tracking-wider text-muted-foreground">
+      <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-muted-foreground">
         {label} {required && <span className="text-primary">*</span>}
       </span>
       {children}
