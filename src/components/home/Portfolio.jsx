@@ -1,14 +1,6 @@
 
 const projects = [
   {
-    img: "/portfolio/arcline-agency.jpg",
-    img2: "/portfolio/arcline-agency-2.jpg",
-    name: "ArcLine Agency",
-    category: "Digital Agency Website",
-    tags: ["Design", "Development", "Dark UI"],
-    desc: "A high-impact performance-first agency site with immersive dark aesthetics and animated visuals.",
-  },
-  {
     img: "/portfolio/lessons-coaching.jpg",
     name: "Lessons Coaching Institute",
     category: "Education & Coaching",
