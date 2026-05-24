@@ -35,10 +35,7 @@ export default function Portfolio() {
           <article className="glass glass-hover group grid overflow-hidden rounded-2xl md:grid-cols-[1.2fr_1fr]">
             <div className="relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent z-10" />
-              <div className="grid grid-cols-2 h-52 sm:h-64 md:h-72">
-                <img src="/portfolio/arcline-agency.jpg" alt="ArcLine Agency" className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-                <img src="/portfolio/arcline-agency-2.jpg" alt="ArcLine Agency page 2" className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105 border-l border-white/10" loading="lazy" />
-              </div>
+              <img src="/portfolio/arcline-agency-2.jpg" alt="ArcLine Agency" className="h-52 w-full object-cover object-top transition-transform duration-700 group-hover:scale-105 sm:h-64 md:h-72" loading="lazy" />
               <div className="absolute top-3 left-3 z-20 flex items-center gap-1.5 rounded-full bg-background/70 backdrop-blur-sm px-3 py-1.5">
                 <span className="h-2 w-2 rounded-full bg-red-400/80" />
                 <span className="h-2 w-2 rounded-full bg-yellow-400/80" />
