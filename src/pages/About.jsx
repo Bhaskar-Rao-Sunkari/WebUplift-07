@@ -4,9 +4,9 @@ import { Rocket, Sparkles, Eye, LifeBuoy } from "lucide-react";
 
 // ✏️ Replace with your actual team member names
 const team = [
-  { name: "Your Name", role: "Founder & Strategy", initials: "YN" },
-  { name: "Team Member 2", role: "Sales & Growth", initials: "TM" },
-  { name: "Team Member 3", role: "Tech & Development", initials: "TM" },
+  { name: "Bhaskar Rao Sunkari", role: "Founder & Strategist", initials: "BR" },
+  { name: "Divyansh Agrawal", role: "Technical Head", initials: "DA" },
+  { name: "Jay Lakhotiya", role: "Outreach", initials: "JL" },
 ];
 
 const why = [

@@ -1,9 +1,9 @@
 import { Star } from "lucide-react";
 
 const testimonials = [
-  { quote: "WebUplift transformed our online presence completely. Within 2 weeks of launch, enquiries doubled.", name: "Priya Sharma", role: "Owner · Sharma Boutique" },
-  { quote: "Professional, fast, and they actually understood what we needed. Best investment for our business.", name: "Rahul Mehta", role: "Founder · FreshBite Foods" },
-  { quote: "The website they built for us looks better than brands 10x our size. Incredible work.", name: "Ananya Patel", role: "Director · Patel Real Estate" },
+  { quote: "WebUplift transformed our online presence completely. Within 2 weeks of launch, enquiries doubled.", name: "Priya Sharma" },
+  { quote: "Professional, fast, and they actually understood what we needed. Best investment for our business.", name: "Rahul Mehta" },
+  { quote: "The website they built for us looks better than brands 10x our size. Incredible work.", name: "Ananya Patel" },
 ];
 
 export default function Testimonials() {
@@ -28,7 +28,6 @@ export default function Testimonials() {
               <blockquote className="mt-5 text-base leading-relaxed text-foreground/90">"{t.quote}"</blockquote>
               <figcaption className="mt-6 border-t border-border/60 pt-4">
                 <div className="text-sm font-semibold">{t.name}</div>
-                <div className="text-xs text-muted-foreground">{t.role}</div>
               </figcaption>
             </figure>
           ))}
