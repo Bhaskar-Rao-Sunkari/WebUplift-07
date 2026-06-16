@@ -15,12 +15,22 @@ const why = [
   { icon: LifeBuoy, title: "Ongoing Support", desc: "We don't disappear after launch." },
 ];
 
+const aboutStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About WebUplift",
+  "url": "https://builderhouse.co.in/about",
+  "description": "WebUplift is a small, ambitious team building premium websites and AI automation for businesses that want to grow without the big-agency price tag."
+};
+
 export default function About() {
   return (
     <>
       <SEO
         title="About Us — WebUplift"
         description="WebUplift is a small, ambitious team building premium websites and AI automation for businesses that want to grow without the big-agency price tag."
+        canonical="/about"
+        structuredData={aboutStructuredData}
       />
 
       {/* Hero */}
@@ -38,7 +48,7 @@ export default function About() {
       </section>
 
       {/* Mission */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24" aria-label="Our Mission">
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
           <div className="glass rounded-2xl border-l-4 border-l-primary p-6 sm:p-10 glow-sm">
             <p className="text-xl font-medium italic leading-snug text-foreground/95 sm:text-2xl md:text-3xl">
@@ -49,7 +59,7 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="pb-16 md:pb-24">
+      <section className="pb-16 md:pb-24" aria-label="Our Team">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="text-center">
             <span className="label-eyebrow">The Team</span>
@@ -60,7 +70,10 @@ export default function About() {
           <div className="mt-10 md:mt-14 grid gap-5 sm:grid-cols-3">
             {team.map((m) => (
               <div key={m.name} className="glass glass-hover rounded-2xl p-6 sm:p-8 text-center">
-                <div className="mx-auto flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-glow text-lg sm:text-xl font-bold text-primary-foreground glow-sm">
+                <div
+                  className="mx-auto flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-glow text-lg sm:text-xl font-bold text-primary-foreground glow-sm"
+                  aria-hidden="true"
+                >
                   {m.initials}
                 </div>
                 <h3 className="mt-4 sm:mt-5 text-base sm:text-lg font-semibold">{m.name}</h3>
@@ -72,7 +85,7 @@ export default function About() {
       </section>
 
       {/* Why us */}
-      <section className="pb-16 md:pb-24">
+      <section className="pb-16 md:pb-24" aria-label="Why Choose WebUplift">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="text-center">
             <span className="label-eyebrow">Why Us</span>
@@ -83,7 +96,7 @@ export default function About() {
           <div className="mt-10 md:mt-14 grid gap-5 sm:grid-cols-2">
             {why.map(({ icon: Icon, title, desc }) => (
               <div key={title} className="glass glass-hover flex gap-4 sm:gap-5 rounded-2xl p-5 sm:p-7">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary" aria-hidden="true">
                   <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
                 <div>

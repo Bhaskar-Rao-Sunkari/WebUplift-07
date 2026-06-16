@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://builderhouse.co.in/sitemap.xml
