@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-const SITE_NAME = "WebUplift";
+const SITE_NAME = "Builder House";
 const BASE_URL = "https://builderhouse.co.in";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg`;
 

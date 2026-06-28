@@ -1,10 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: 10, suffix: "+", label: "Websites Delivered" },
   { value: 3, suffix: "x", label: "Average Traffic Growth" },
-  { value: 48, suffix: "h", label: "Average Turnaround" },
-  { value: 100, suffix: "%", label: "Client Satisfaction" },
+  { value: 14, suffix: " days", label: "Typical Turnaround" },
+  { value: 100, suffix: "%", label: "Fixed-Price Projects" },
 ];
 
 function CountUp({ end, suffix }) {
@@ -20,7 +19,7 @@ function CountUp({ end, suffix }) {
         entries.forEach((e) => {
           if (e.isIntersecting && !started.current) {
             started.current = true;
-            const duration = 1400;
+            const duration = 1200;
             const start = performance.now();
             const tick = (t) => {
               const p = Math.min((t - start) / duration, 1);
@@ -43,12 +42,11 @@ function CountUp({ end, suffix }) {
 
 export default function Stats() {
   return (
-    <section className="relative overflow-hidden border-y border-border/60 bg-[oklch(0.16_0.02_165)] py-16 md:py-20">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--primary)_0%,_transparent_60%)] opacity-10" />
-      <div className="relative mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 grid-cols-2 md:grid-cols-4">
+    <section className="relative overflow-hidden border-y border-border bg-muted/40 py-16 md:py-20">
+      <div className="relative mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 grid-cols-1 sm:grid-cols-3">
         {stats.map((s) => (
           <div key={s.label} className="text-center">
-            <div className="text-4xl font-bold tracking-tight text-gradient sm:text-5xl md:text-6xl">
+            <div className="text-4xl font-bold tracking-tight text-gradient sm:text-5xl">
               <CountUp end={s.value} suffix={s.suffix} />
             </div>
             <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-muted-foreground">{s.label}</p>

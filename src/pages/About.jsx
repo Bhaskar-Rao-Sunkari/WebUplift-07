@@ -18,17 +18,17 @@ const why = [
 const aboutStructuredData = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  "name": "About WebUplift",
+  "name": "About Builder House",
   "url": "https://builderhouse.co.in/about",
-  "description": "WebUplift is a small, ambitious team building premium websites and AI automation for businesses that want to grow without the big-agency price tag."
+  "description": "Builder House is a small, ambitious team building premium websites and AI automation for businesses that want to grow without the big-agency price tag."
 };
 
 export default function About() {
   return (
     <>
       <SEO
-        title="About Us — WebUplift"
-        description="WebUplift is a small, ambitious team building premium websites and AI automation for businesses that want to grow without the big-agency price tag."
+        title="About Us — Builder House"
+        description="Builder House is a small, ambitious team building premium websites and AI automation for businesses that want to grow without the big-agency price tag."
         canonical="/about"
         structuredData={aboutStructuredData}
       />
@@ -37,12 +37,12 @@ export default function About() {
       <section className="relative overflow-hidden bg-hero py-20 md:py-24">
         <div className="absolute inset-0 grid-bg opacity-40" />
         <div className="relative mx-auto max-w-4xl px-4 sm:px-6 text-center">
-          <span className="label-eyebrow">About WebUplift</span>
+          <span className="label-eyebrow">About Builder House</span>
           <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             We're a Small Team with <span className="text-gradient">Big Ambitions</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg text-muted-foreground">
-            WebUplift was built to give small and medium businesses access to the same digital firepower that big brands use — without the big agency price tag.
+            Builder House was built to give small and medium businesses access to the same digital firepower that big brands use — without the big agency price tag.
           </p>
         </div>
       </section>
@@ -85,7 +85,7 @@ export default function About() {
       </section>
 
       {/* Why us */}
-      <section className="pb-16 md:pb-24" aria-label="Why Choose WebUplift">
+      <section className="pb-16 md:pb-24" aria-label="Why Choose Builder House">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="text-center">
             <span className="label-eyebrow">Why Us</span>

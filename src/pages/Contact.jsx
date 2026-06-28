@@ -10,9 +10,9 @@ const FORMSPREE_ID = "YOUR_FORMSPREE_ID";
 const contactStructuredData = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  "name": "Contact WebUplift",
+  "name": "Contact Builder House",
   "url": "https://builderhouse.co.in/contact",
-  "description": "Get in touch with WebUplift for website development, AI automation, and digital marketing services.",
+  "description": "Get in touch with Builder House for website development, AI automation, and digital marketing services.",
 };
 
 export default function Contact() {
@@ -47,7 +47,7 @@ export default function Contact() {
   return (
     <>
       <SEO
-        title="Contact WebUplift — Let's Build Together"
+        title="Contact Builder House — Let's Build Together"
         description="Tell us about your project. We respond within 24 hours. Email, WhatsApp, or use the form to start your website or AI automation project."
         canonical="/contact"
         structuredData={contactStructuredData}

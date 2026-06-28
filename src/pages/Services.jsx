@@ -17,7 +17,7 @@ const services = [
       "Mobile-first design",
       "SEO-optimised structure",
     ],
-    waMessage: "Hi! I'm interested in Website Development services from WebUplift.",
+    waMessage: "Hi! I'm interested in Website Development services from Builder House.",
   },
   {
     icon: Zap,
@@ -29,7 +29,7 @@ const services = [
       "CRM integration",
       "Lead capture systems",
     ],
-    waMessage: "Hi! I'm interested in AI & Automation services from WebUplift.",
+    waMessage: "Hi! I'm interested in AI & Automation services from Builder House.",
   },
   {
     icon: Target,
@@ -41,14 +41,14 @@ const services = [
       "Email automation",
       "Analytics and reporting",
     ],
-    waMessage: "Hi! I'm interested in AI Marketing services from WebUplift.",
+    waMessage: "Hi! I'm interested in AI Marketing services from Builder House.",
   },
 ];
 
 const servicesStructuredData = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "WebUplift Services",
+  "name": "Builder House Services",
   "url": "https://builderhouse.co.in/services",
   "itemListElement": services.map((s, i) => ({
     "@type": "ListItem",
@@ -62,8 +62,8 @@ export default function Services() {
   return (
     <>
       <SEO
-        title="Our Services — WebUplift"
-        description="Web development, AI automation, and AI marketing services from WebUplift. Custom websites, chatbots, workflow automation, and lead generation."
+        title="Our Services — Builder House"
+        description="Web development, AI automation, and AI marketing services from Builder House. Custom websites, chatbots, workflow automation, and lead generation."
         canonical="/services"
         structuredData={servicesStructuredData}
       />

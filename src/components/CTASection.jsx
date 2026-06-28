@@ -19,7 +19,7 @@ export default function CTASection() {
             href={`https://wa.me/${WHATSAPP}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex w-full max-w-xs items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground glow-sm transition-all hover:glow-lg hover:brightness-110 sm:w-auto sm:px-8 sm:py-4 sm:text-base"
+            className="group inline-flex w-full max-w-xs items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110 hover:shadow-[var(--shadow-glow)] sm:w-auto sm:px-8 sm:py-4 sm:text-base"
           >
             <MessageCircle className="h-5 w-5 shrink-0" />
             WhatsApp: +91 86024 75603

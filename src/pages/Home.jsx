@@ -10,43 +10,24 @@ import CTASection from "../components/CTASection.jsx";
 const homeStructuredData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "WebUplift",
+  "name": "Builder House",
   "url": "https://builderhouse.co.in",
-  "description": "AI-powered website development, automation, and digital marketing agency based in India.",
+  "description": "Premium website design and development studio for small and growing businesses in India.",
   "email": "builderhouse.work@gmail.com",
   "telephone": "+918602475603",
   "priceRange": "₹₹",
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "IN"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "10"
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-      "author": { "@type": "Person", "name": "Priya Sharma" },
-      "reviewBody": "WebUplift transformed our online presence completely. Within 2 weeks of launch, enquiries doubled."
-    },
-    {
-      "@type": "Review",
-      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-      "author": { "@type": "Person", "name": "Rahul Mehta" },
-      "reviewBody": "Professional, fast, and they actually understood what we needed. Best investment for our business."
-    }
-  ]
+  }
 };
 
 export default function Home() {
   return (
     <>
       <SEO
-        title="WebUplift — AI-Powered Websites & Automation Agency"
-        description="WebUplift builds modern, conversion-focused websites and AI automation systems for ambitious businesses. Fast delivery, fixed pricing, real results."
+        title="Builder House — Premium Websites for Ambitious Businesses"
+        description="Builder House designs and builds premium, conversion-ready websites for small and growing businesses in India. Fixed pricing, fast delivery, honest process."
         canonical="/"
         structuredData={homeStructuredData}
       />

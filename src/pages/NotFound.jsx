@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <>
       <SEO
-        title="Page Not Found — WebUplift"
+        title="Page Not Found — Builder House"
         description="The page you're looking for doesn't exist."
         noIndex={true}
       />

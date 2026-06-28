@@ -9,16 +9,15 @@ const INSTAGRAM_URL = "#";
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-primary/30 bg-[oklch(0.1_0_0)]">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+    <footer className="relative border-t border-border bg-surface">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 py-12 md:py-16 sm:grid-cols-2 md:grid-cols-3">
         <div>
           <Link to="/" className="text-xl font-bold tracking-tight">
-            <span className="text-foreground">Web</span>
-            <span className="text-gradient">Uplift</span>
+            <span className="text-foreground">Builder</span>
+            <span className="text-gradient">House</span>
           </Link>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-            AI-powered websites & automation built to grow your business.
+            Premium websites for businesses that want to look as good as they actually are.
           </p>
           <div className="mt-6 flex gap-3">
             <a href={LINKEDIN_URL} aria-label="LinkedIn" className="rounded-full border border-border p-2.5 text-muted-foreground transition-colors hover:border-primary hover:text-primary">
@@ -68,10 +67,10 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-border/60">
+      <div className="border-t border-border">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 sm:px-6 py-5 text-xs text-muted-foreground sm:flex-row">
-          <p>© 2025 WebUplift. All rights reserved.</p>
-          <p>Built with AI</p>
+          <p>&copy; {new Date().getFullYear()} Builder House. All rights reserved.</p>
+          <p>Designed &amp; built in India</p>
         </div>
       </div>
     </footer>

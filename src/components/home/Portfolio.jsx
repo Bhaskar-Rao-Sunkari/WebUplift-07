@@ -27,7 +27,7 @@ export default function Portfolio() {
             Real Projects, <span className="text-gradient">Real Results</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm sm:text-base text-muted-foreground">
-            A few of the websites we've built for businesses across India.
+            A look at recent projects — real businesses, real screenshots.
           </p>
         </div>
 
